@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind-Blowing Birthday Wish</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #ff00cc, #3333ff);
+      color: #fff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    h1 {
+      font-size: 4rem;
+      animation: pop 1s ease-in-out infinite alternate;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      color: #ffeb3b;
+    }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: yellow;
+      animation: fall 5s linear infinite;
+      top: -10px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+    @keyframes pop {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday! 🎂</h1>
+  <h2>Wishing you a day full of love, laughter, and cake! 🍰✨</h2>
+  <h3>To the amazing <span style="text-decoration: underline;">sweta ka</span> 🎈</h3>
+
+  <!-- Confetti -->
+  <script>
+    for (let i = 0; i < 100; i++) {
+      let confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
